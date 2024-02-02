@@ -3,7 +3,7 @@ require 'my_array'
 describe 'my_array' do
     describe 'my_uniq' do
         it 'should accept a single array' do
-            expect(my_uniq([])).to_not raise_error
+            expect{ my_uniq([]) }.to_not raise_error
         end
         it 'should return an array containing only unique values' do
             r1 = [1, 2, 1, 3, 3]
@@ -25,7 +25,7 @@ describe 'my_array' do
                 [3, 4, 5],
                 [6, 7, 8]
             ]
-            expect (my_transpose(matrix)).to eq(matrix.transpose)
+            expect(my_transpose(matrix)).to eq(matrix.transpose)
         end
     end
 end
